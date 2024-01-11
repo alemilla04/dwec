@@ -1,0 +1,134 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(/assets/static/OpenSans-Regular.ttf);
+}
+
+:root {
+    font-family: OpenSans;
+    --color-100: lightgreen;
+    --color-500: green;
+    --color-900: darkgreen;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer"
+    ;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+table, thead, th, tr, td {
+    border: 2px solid blue;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px
+}
+
+aside.ads-left, aside.ads-right {
+    display: none;
+}
+
+.page-header {
+    grid-area: header;
+    background-color: var(--color-900);
+    color: var(--color-100);
+    display: flex;
+}
+
+.page-title {
+    /* Todo el espacio que sobre se lo quede tienda */
+    flex-grow: 1;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cart-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: green;
+}
+
+.cart-button:hover + .cart-content {
+    display: block;
+}
+
+nav {
+    grid-area: nav;
+    background-color: var(--color-500);
+    color: var(--color-100);
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--color-500);
+    color: var(--color-100);
+    text-align: center;
+}
+
+.spinner-waiting {
+    width: 200px;
+    height: 200px;
+    border: solid 10px var(--color-500);
+    border-right: none;
+    border-bottom: none;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    animation: dimensions 1s linear 0s infinite alternate both;
+}
+
+.spinner-waiting::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border: solid 10px var(--color-500);
+    border-left: none;
+    border-top: none;
+}
+
+@keyframes dimensions {
+    from {
+        width: 200px;
+        height: 0px;
+    }
+
+    to {
+        width: 0px;
+        height: 200px;
+    }
+}

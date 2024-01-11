@@ -1,0 +1,72 @@
+@font-face{
+    font-family: 'Blippo-bold';
+    src: url(../../fonts/Blippo\ Bold/Blippo-bold.ttf) format('truetype');
+}
+
+:root {
+    font-family: Blippo-bold;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+table, thead, tbody, th, tr, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+    background: bisque;
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+body {
+    min-height: 100vh;
+    /* place-items: center; */
+    background-image: url("/assets/playmobile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+body>header {
+    background-color: rgba(255, 227, 194, .5);
+}
+
+form {
+    display: grid;
+    place-items: center;
+    border: solid 1px bisque;
+    gap: 0.5rem;
+    padding: 20px;
+    border-radius: 10%;
+    background-color: bisque;
+    box-shadow: 10px 10px 10px bisque;
+}
+
+form>label {
+    text-align: center;
+}
+
+form>header {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.add {
+    padding: 10px;
+}
+@media screen and (min-height: 760px) {
+    form>header, button {
+        grid-column: 1 / span 2;
+    }
+    
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+        import {openSpinner,closeSpinner} from '/spinner.lib.js';
+        document.addEventListener("DOMContentLoaded",_=>{
+            document.querySelector("#boton").addEventListener('click',validateUser);
+        });
+
+        async function validateUser(){
+
+            openSpinner();
+            const user = document.querySelector('#tTxUsuario').value;
+            const pass = document.querySelector('#tPasPassword').value;
+
+            const  response = await fetch('http://127.0.0.1:9001/api/login_user', {
+                method: 'post',
+                headers: {
+                    'content-type': 'application/json',
+                    accept: 'application/json'
+                },
+                body: JSON.stringify({ username:user, password:pass })
+            });
+
+            const data = await response.json();
+            const token = data.accessToken;
+            window.localStorage.setItem('token',token);
+            
+            closeSpinner();
+            
+        };
+
+    </script>
+
+</head>
+<body>
+    <form onsubmit="return false">
+        <header>Autentifacion de usuarios</header>
+        <label for="">Usuario</label>
+        <input type="text" value="sonia.silverado" id="tTxUsuario"  pattern="[a-z]+\.[a-z0-9]+" title="Formato: nombre.apellido" required>
+
+        <label for="">Password</label>
+        <input type="password" value="s" id="tPasPassword" required>
+
+        
+        <input type="submit" class= "validar"value="Validar usuario" id="boton">
+    </form>
+</body>
+</html>

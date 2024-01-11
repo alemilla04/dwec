@@ -1,0 +1,13 @@
+:root {
+    font-size: 30px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+table, thead, tbody, td, th, tr {
+    border: solid 2px black;
+    border-collapse: collapse;
+}
+
+table {
+    margin-top: 15px;
+}

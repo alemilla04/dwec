@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    background-color: blue;
+    display: flex;
+}
+
+.page-title {
+    flex-grow: 1;
+    text-align: center;
+}
+/* + es el hermano siguiente, en este caso, del input[checkbox] */
+.button-menu :focus + nav{
+    display: none;
+}
+
+.button-menu:not(:focus) + nav{
+    display: none;
+}
+
+.button-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+nav {
+    background-color: green;
+}
+
+.level-2 {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}

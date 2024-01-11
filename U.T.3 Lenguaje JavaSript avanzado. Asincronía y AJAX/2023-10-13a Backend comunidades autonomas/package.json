@@ -1,0 +1,15 @@
+{
+  "name": "2023-10-13a-backend-comunidades-autonomas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ComunidadesRepositoryMock.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexa Milla",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "type": "module"
+}

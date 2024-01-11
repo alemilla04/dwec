@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- <script type="module" src="./components/MiHeaderComponent.js"></script> -->
+    <script type="module" src="./code.js"></script>
+
+    <script type="module">
+        import { retrieveAndRenderBooks } from "./code.js";
+
+        document.addEventListener("DOMContentLoaded", _ => {
+            retrieveAndRenderBooks();
+        });
+    </script>
+</head>
+<body>
+    <mi-header></mi-header>
+
+    <mi-nav></mi-nav>
+
+    <main>    
+        <label>LIBROS</label>
+        <ul id="tUlBooks">
+        </ul>
+    </main>
+
+    <footer>© Alexa Milla Villavicencio 2023</footer>
+
+
+</body>
+</html>

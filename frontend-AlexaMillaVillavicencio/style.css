@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form>select{
+    size: 4;
+}
+
+table, th, thead, tr, td, tbody {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 2px;
+}

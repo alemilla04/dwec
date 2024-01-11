@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlightsBooking ✈️</title>    
+    <script type="module" src="./choose_flights.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header id="tHeadUser"></header>
+    <br>
+    FlightsBooking ✈️</h1>
+    <br><br>
+    <ul>
+        <li><a href="./index.htm">Inicio</a></li>
+        <li><a href="./choose_origin_airport.htm">Aeropuertos de salida</a></li>
+        <li><a href="./choose_destination_airport.htm">Aeropuertos de destino</a></li>
+    </ul>
+
+    Vuelos
+    Salida en
+    <br>
+    <p id="tPSalida"></p>
+    Llegada en
+    <br>
+    <p id="tPLlegada"></p>
+    
+    Seleccione los vuelos que desea reservar:
+    <br>
+    <table id="tTabVuelos">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Fecha/hora</th>
+                <th>Precio vuelo</th>
+                <th>Precio maleta</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>

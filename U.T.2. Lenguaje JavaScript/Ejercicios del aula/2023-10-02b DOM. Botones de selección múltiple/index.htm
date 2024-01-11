@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <h4>Aficiones</h4>
+
+    <form>
+        <input type="checkbox" name="sports" id="tChkSports" value="si">
+        <label for="tChkSports">Deportes</label>
+
+        <input type="checkbox" name="movies" id="tChkMovies" value="si">
+        <label for="tChkMovies">Cine</label>
+
+        <input type="checkbox" name="dance" id="tChkDance" value="si">
+        <label for="tChkDance">Baile</label>
+
+        <input type="checkbox" name="reggaeton" id="tChkReggaeton" disabled value="si">
+        <label for="tChkReggaeton">Reggaeton</label>
+
+        <input type="submit" value="Enviar datos" style="display: block; margin-top: 1rem">
+    </form>
+    <h4>Categorías profesionales</h4>
+    <div id="tDivCategories"></div>
+
+    <script type="module" src="./code.js"></script>
+</body>
+</html>

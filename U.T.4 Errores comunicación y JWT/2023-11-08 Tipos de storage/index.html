@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="module">
+        const name = "Andrés";
+        const age = 19;
+        const person1 = { name: "Roque Castro", age: 19 };
+        const person2 = { name: "Alejando Ruiz", age: 19 };
+        const people = [person1,person2]
+
+        window.sessionStorage.setItem("name",name);
+        window.localStorage.setItem("age",age)
+        window.sessionStorage.setItem("person1",JSON.stringify(person1));
+        window.sessionStorage.setItem("person2",JSON.stringify(person2));
+        
+        window.sessionStorage.setItem("people",JSON.stringify(people));
+
+
+        </script>
+</head>
+<body>
+    <strong>Tipos de almacenamiento: </strong>
+
+    <!-- sandbox -->
+    <ul>
+        <li>localStorage</li>
+        <li>sessionStorage</li>
+        <li>DBStorage</li>
+    </ul>
+
+    <a href="http://127.0.0.1:5500/second.html">Segundo</a>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./products.js"></script>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <!-- <div class="spinner-waiting"></div> -->
+    
+    <header class="page-header">
+        <div class="page-title">Tienda</div>
+        <div class="cart-button" id="tDivCartButton">🛒</div>
+        <div class="cart-content" id="tdivCart">
+            <header>Cart</header>
+            <table id="tTabCart">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Unidades</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/views/master.htm">Maestro de tablas</a></li>
+            <li><a href="/views/categories.htm">Categorías</a></li>
+            <li><a href="/views/products.htm">Productos</a></li>
+        </ul>
+    </nav>
+
+    <aside class="ads-left"></aside>
+    <aside class="ads-right"></aside>
+
+    <main>
+        <header>Productos</header>
+        <!-- 
+            https://127.0.0.1:8080/views/products
+            Si en la URL no hay ningún código de categoria se mostrarán
+            todos los productos.
+            https://127.0.0.1:8080/views/products.htm?category=3
+            si hay un código de categoría se mostrarán solo los productos de dicha categoría.
+         -->
+         <table id="tTabProducts">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+         </table>
+    </main>
+    <footer>© Alexa Milla Villavicencio</footer>
+</body>
+</html>

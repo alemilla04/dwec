@@ -1,0 +1,99 @@
+:root {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    --color-100: rgb(237, 228, 238);
+    --color-500: #fd6ffd;
+    --color-900: #350235;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: var(--color-900);
+    color: var(--color-100);
+    text-align: center;
+    /* top bottom */
+    padding: 0.5rem 0; 
+}
+
+header {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+main {
+    background-color: var(--color-100);
+    color: var(--color-900);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+main > label {
+    font-weight: bold;
+    text-align: center;
+    row-gap: 1;
+}
+
+main > ol{
+    margin: 0 4rem;
+}
+
+main > select {
+    font-size: 2rem;
+    color: var(--color-900);
+}
+
+footer {
+    font-size: 1rem;
+}
+
+.spinner-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgb(54, 2, 54, 0.9);
+    pointer-events: none;
+    display: grid;
+    place-items: center;
+}
+
+.spinner-loading img {
+    width: 100px;
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+/* no mobile */
+@media screen and (min-width: 450px) {
+    ol {
+        columns: 2;
+        column-gap: 4rem;
+    }
+}
+
+/* no table */
+@media screen and (min-width: 800px) {
+    ol {
+        columns: 4;
+        column-gap: 4rem;
+    }
+}

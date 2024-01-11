@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        strong{
+            grid-column: span 2;
+        }
+
+    </style>
+
+    <script type="module">
+        document.addEventListener("DOMContentLoaded", _ => {
+            const name = window.sessionStorage.getItem("name");
+            document.querySelector("#tTxtName").value = name;
+            
+
+            document.querySelector("#tTxtAge").value = window.localStorage.getItem("age");
+
+            const person1 = JSON.parse(window.sessionStorage.getItem("person1"));
+            document.querySelector("#tTxtPerson1").value = `${person1.name} ${person1.age}`;
+
+            const people = JSON.parse(window.sessionStorage.getItem("people"));
+            document.querySelector("#tTxtPerson2").value = `${people[1].name} ${people[1].age}`;
+        });
+    </script>
+
+</head>
+<body>
+    <strong>Datos recuperados</strong>
+
+    <label>Nombre: </label>
+    <input type="text" id="tTxtName" >
+
+    <label>Edad: </label>
+    <input type="text" id="tTxtAge" >
+
+    <label>Persona uno: </label>
+    <input type="text" id="tTxtPerson1" >
+
+    <label>Persona dos: </label>
+    <input type="text" id="tTxtPerson2" >
+
+</body>
+</html>
+
+Por eso pense en abandonar la idea

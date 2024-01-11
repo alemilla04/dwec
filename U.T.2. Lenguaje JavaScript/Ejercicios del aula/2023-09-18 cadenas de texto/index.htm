@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        var nombre = 'Alexa';
+        var apellidos = 'Milla Villavicencio';
+        var poblacion = 'Lorca';
+        var pais = 'España';
+
+        var mensaje1 = 'Hola, soy '+ nombre + ' ' + apellidos + '. Vivo en ' + poblacion + '. Nací en ' + pais + '.';
+        console.log(mensaje1);
+
+        //Interpolación de cadenas - string literals - f-string
+        var mensaje2 = `Hola, soy ${nombre} ${apellidos}. Vivo en ${poblacion}. Nací en ${pais}`;
+        console.log(mensaje2)
+
+function mostrar_mensaje(
+    nombre = 'Pepe',
+    apellidos = 'Lopez Alegría', 
+    poblacion = 'Totana', 
+    pais = 'Francia'){
+    var mensaje2 = `Hola, soy ${nombre} ${apellidos}. Vivo en ${poblacion}. Nací en ${pais}`;
+    console.log(mensaje2);
+
+    mostrar_mensaje();
+    mostrar_mensaje('Ana María', 'Sanchez Jiménez');
+}
+
+    </script>
+</body>
+</html>

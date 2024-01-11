@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td onclick="showMessage('rojo')">Lorem.</td>
+            <td onclick="showMessage('verde')">Official</td>
+            <td onclick="showMessage('azul')">Dolor.</td>
+        </tr>
+        <tr>
+            <td onclick="showMessage('amarillo')">Lorem.</td>
+            <td onclick="showMessage('cyan')">Esse.</td>
+            <td onclick="showMessage('magenta')">Quos.</td>
+        </tr>
+    </table>
+
+    <br>
+    <p id="tParMessage"></p>
+    <script>
+        'use strict';
+        function showMessage(color) {
+            const nParagh = document.getElementById('tParMessage');
+            nParagh.textContent = `Has clickedao en el color <b>${color}</b>`;
+        }
+    </script>
+</body>
+</html>

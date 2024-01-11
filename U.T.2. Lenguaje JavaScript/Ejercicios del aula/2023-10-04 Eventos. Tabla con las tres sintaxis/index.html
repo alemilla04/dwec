@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            font-size: 2rem;
+            border: solid 1px red;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Primera sintaxis. Poner el evento en la propia etiqueta -->
+    <!-- Al clickear el parrafo 1 salta un mensaje en la pagina web-->
+    <p onclick="alert('Has clickeado el parrafo 1')">Este es el parrafo 1</p>
+    <!-- Al pasar el raton por encima salta un mensaje en la pagina web-->
+    <p onmouseover="mostrarMensajeDos()">Este es el parrafo 2</p>
+    <!-- Al estar dentro del parrafo o fuera del parrafo 3 saldra un mensaje en consola-->
+    <p onmouseover="console.log('dentro')" onmouseout="console.log('Fuera')">Este es el parrafo 3</p>
+    <!--Segunda Sintaxis
+    Mediante DOM con la que se recupera la etiqueta y el evento se configura como objeto-->
+    <p id="tParFour">Este es el parrafo 4</p>
+
+    <p id="tParFive">Este es el parrafo 5</p>
+
+    <script>
+
+        'use strict';
+        function mostrarMensajeDos() {
+            alert('Has entrado en el parrafo 2');
+        }
+
+        function mostrarMensajeCuatro() {
+            alert('Hola soy el parrafo 4');
+        }
+
+        const nParagrah4 = document.getElementById('tParFour');
+        nParagrah4.setAttribute('onclick','mostrarMensajeCuatro()');
+        nParagrah4.onclick = mostrarMensajeCuatro;
+
+        //Tercera sintaxis: la que es igual a Java y la favorita del maestro
+        const nParagrah5 = document.getElementById('tParFive');
+        //Con funcion lambda
+        nParagrah5.addEventListener('click', () => alert('Has clickeado el parrafo 5'));
+        nParagrah5.addEventListener('click', () => console.log('Has elegido el parrafo 5'));
+    
+    </script>
+    
+</body>
+
+</html>

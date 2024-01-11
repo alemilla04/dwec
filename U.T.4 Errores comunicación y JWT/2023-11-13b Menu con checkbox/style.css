@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    background-color: blue;
+    display: flex;
+}
+
+.page-title {
+    flex-grow: 1;
+    text-align: center;
+}
+/* + es el hermano siguiente, en este caso, del input[checkbox] */
+.checkbox-menu:not(:checked) + nav{
+    display: none;
+}
+
+.checkbox-menu {
+    display: none;
+}
+
+nav {
+    background-color: green;
+}
+
+.level-2 {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,80 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    --color-page: #d3d3d3;
+    --color-dark: #00008b;
+    --color-medium: #8787d0;
+    --color-medium-half-transparent: rgb(135, 135, 208, 0.5);
+    --color-light: #add8e6;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-page);
+    background-image: url(./photos/audi_a3.jpg);
+    background-repeat: no-repeat;   
+    background-size: 100% 100%;
+}
+
+body > header {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+img{
+    height: 250px;
+    width: 350px;
+    margin: 1em;
+    filter: ;
+}
+
+main {
+    height: 80%;
+    border: solid 2px red;
+    display: grid;
+    place-content: center;
+}
+
+form {
+    border: solid 3px var(--color-dark);
+    background-color: var(--color-medium-half-transparent);
+    border-radius: 20px;
+    width: 400px;
+    font-size: 40px;
+}
+
+form > header {
+    background-color: var(--color-dark);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: var(--color-light);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.25rem;
+}
+
+select, input[type="submit"]{
+    font-size: 1em;
+    display: block;
+}
+
+aside {
+    width: 100px;
+    position: absolute;
+    right: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}

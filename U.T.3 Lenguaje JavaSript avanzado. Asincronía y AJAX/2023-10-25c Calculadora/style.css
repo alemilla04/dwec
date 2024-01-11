@@ -1,0 +1,45 @@
+:root {
+    font-size: 50px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --border-color: #02FE00;
+    --bgc-color-numbers: #DEB887;
+    --bgc-color-simbols: #FF7F50;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    
+}
+
+.box {
+    border: solid 7px var(--border-color);
+    padding: 20px 13px;
+    background-color: #DEB887;
+}
+
+.box0 {
+    background-color: #FFFFFF;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    padding-left: 220px;
+}
+
+.box-menos, .box-mas, .box-menos, .box-asterisk, .box-igual, .box-slash {
+    background-color: var(--bgc-color-simbols);
+}
+
+.box-igual {
+    
+}
+
+
