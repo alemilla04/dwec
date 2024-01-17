@@ -1,0 +1,12 @@
+:host {
+    /* inline ocupa lo que hay dentro*/
+    /* block  ocupa lo de su padre*/
+    display: inline-flex;
+    flex-direction: column;
+    border: solid 10px black;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
