@@ -13,6 +13,6 @@ export class TableCountriesComponent {
   public countries: any;
 
   constructor(private _service: CountriesService) {
-    this.countries = this._service.retrieveCountries();
+    this._service.retrieveCountries().subscribe(countries=>this.countries = countries);
   }
 }
