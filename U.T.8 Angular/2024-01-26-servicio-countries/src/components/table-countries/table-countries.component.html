@@ -1,0 +1,14 @@
+<table *ngIf="countries">
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let country of countries">
+            <td>{{country.name.common}}</td>
+            <td>{{country.capital}}</td>
+        </tr>
+    </tbody>
+</table>
