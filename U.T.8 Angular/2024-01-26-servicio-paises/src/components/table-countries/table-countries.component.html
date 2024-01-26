@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            <th>País</th>
+            <th>Capital</th>
+        </tr>
+    </thead>
+    <!-- ngIf="countries" es la propiedad countries definida en el typescript. Tienen
+        que llamarse igual-->
+    <tbody *ngIf="countries$ | async as countries">
+        <tr *ngFor="let country of countries">
+            <td>{{country.name.common}}</td>
+            <td>{{country.capital}}</td>
+        </tr>
+    </tbody>
+</table>
