@@ -13,8 +13,8 @@ import { GamesService } from '../services/games.service';
 })
 export class CardGameComponent implements OnInit{
   @Input('game') public game: string = "";
-  //@ts-ignore
-  game$: Observable<GameT>;
+  
+  game$: Observable<GameT> = {} as Observable<GameT>;
 
   constructor(private _service: GamesService) {
   } 
