@@ -1,0 +1,14 @@
+:host {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+router-outlet { 
+    display: none;
+}
+
+nav {
+    grid-row: 1;
+    background-color: magenta;
+}
