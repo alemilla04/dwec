@@ -1,0 +1,4 @@
+<div *ngIf="pokemon$ | async as pokemon">
+    <header>{{pokemon.name}}</header>
+    <img [src]="pokemon.image">
+</div>
