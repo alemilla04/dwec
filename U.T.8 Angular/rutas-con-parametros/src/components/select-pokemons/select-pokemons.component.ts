@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class SelectPokemonsComponent {
   //@ts-ignore
-  pokemons$: Observable<number>;
+  pokemons$: Observable<number[]>;
 
   constructor(private _service: PokemonsService) {
     this.pokemons$ = this._service.getPokemons$();

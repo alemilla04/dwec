@@ -18,7 +18,7 @@ export class PokemonsService {
     );
   }
 
-  public getPokemons$():Observable<number> {
+  public getPokemons$():Observable<number[]> {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=0&limit=20`;
     return this._http.get(url).pipe(
       //@ts-ignore
