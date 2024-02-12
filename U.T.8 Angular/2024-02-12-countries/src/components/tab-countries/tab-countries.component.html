@@ -1,0 +1,11 @@
+<h1>Países</h1>
+
+<hero-country *ngIf="countriesLoaded; else message"
+country="ESP" (countryLiked)="reportLikeSpain($event)"
+(countryloaded)="reportLoaded($event)"></hero-country>
+
+<hero-country country="COL"></hero-country>
+
+<ng-template #message>
+    <div>Recuperando información del servidor</div>
+</ng-template>
