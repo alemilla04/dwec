@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { products } from './products';
 import { Observable, map, of } from 'rxjs';
+import { categories } from './categories';
 
 export type ProductT = {
   id: number,
@@ -9,6 +10,11 @@ export type ProductT = {
   cost: number,
   price: number,
   categoryId: number,
+}
+
+export type CategoryT = {
+  id: number,
+  name: string,
 }
 
 @Injectable({
@@ -31,6 +37,15 @@ export class HardwaresolutionsMockService {
     );
   }
 
+  public getCategories$(): Observable<CategoryT[]>{
+    return of(
+      categories.map(category => ({
+        id: parseInt(category.category_id),
+        name: category.category_name,
+      }))
+    );
+  }
+
   public getProductById$(productId: number): Observable<ProductT>{
     const product = products.map(product => ({
       id: parseInt(product.product_id),
@@ -42,5 +57,15 @@ export class HardwaresolutionsMockService {
     })).find(product => product.id === productId); 
     //@ts-ignore
     return of(product);   
+  }
+  
+  public getCategoryById$(categoryId: number): Observable<CategoryT>{
+    const category = categories
+    .map(category => ({
+      id: parseInt(category.category_id),
+      name: category.category_name,
+    })).find(category => category.id === categoryId); 
+    //@ts-ignore
+    return of(category);   
   }
 }
