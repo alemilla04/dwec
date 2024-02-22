@@ -1,0 +1,18 @@
+:host {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: solid 5px red;
+    border-right: 0;
+    border-radius: 50%;
+    animation: spinning 1s linear 0s infinite;
+}
+
+@keyframes spinning {
+    from {
+        rotate: 0turn;
+    }
+    to{
+        rotate: 1turn;
+    }
+}
