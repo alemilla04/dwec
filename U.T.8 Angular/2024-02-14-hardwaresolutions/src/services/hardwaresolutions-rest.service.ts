@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, delay, map } from 'rxjs';
 import { ProductT } from './hardwaresolutions-mock.service';
+import { CategoryT } from './hardwaresolutions-mock.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +15,18 @@ export class HardwaresolutionsRestService {
   
   // }
 
-  // public getCategories$() {
-
-  // }
+  public getCategories$(): Observable<CategoryT[]> {
+    const url = "http://127.0.0.1:8080/rest/categories.php";
+    return this._http.get(url).pipe(
+      //@ts-ignore
+      map(response=>response.categories),
+      //@ts-ignore
+      map(categories => categories.map(category=>({
+        id: category.category_id,
+        name: category.category_name,
+      })))
+    );
+  }
 
   public getProductById$(productId: number): Observable<ProductT>{
     const url = `http:127.0.0.1:8080/rest/products.php?product_id=${productId}`;
